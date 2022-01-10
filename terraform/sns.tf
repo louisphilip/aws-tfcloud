@@ -1,3 +1,3 @@
 resource "aws_sns_topic" "my-topic" {
-  name = "my-topic-changed"
+  name = "my-lil-topic"
 }

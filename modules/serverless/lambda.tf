@@ -1,7 +1,7 @@
 module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "${module.naming.common_prefix}-serverless"
+  function_name = "${local.common_prefix}-serverless"
   description   = "My awesome serverless lambda function"
   handler       = "index.lambda_handler"
   runtime       = "python3.8"
@@ -9,9 +9,7 @@ module "lambda_function" {
   lambda_role   = aws_iam_role.lambda_role.arn
   create_role   = false
 
-  source_path = "./lambda/serverless"
-
-  tags = module.naming.common_tags
+  source_path = "${path.module}/lambda/serverless"
 }
 
 # Lambda Trigger

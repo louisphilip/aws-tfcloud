@@ -1,1 +1,0 @@
-{"filename": "builds/c29c5d795071e4fcc8c92c02c8655debc9b2214e612e422d98851f50eaa17c28.zip", "runtime": "python3.8", "artifacts_dir": "builds", "build_plan": [["zip", "./lambda/serverless", null]]}

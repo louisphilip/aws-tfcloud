@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      TF_ROOT: /
+      TF_ROOT: .
       INFRACOST_TERRAFORM_CLOUD_TOKEN: ${{ secrets.TFC_TOKEN }}
       INFRACOST_TERRAFORM_CLOUD_HOST: app.terraform.io 
 
@@ -41,7 +41,7 @@ jobs:
                       --format=json \
                       --compare-to=/tmp/infracost-base.json \
                       --out-file=/tmp/infracost.json
-                      
+
     - name: Post Infracost comment
       run: |
           infracost comment github --path=/tmp/infracost.json \

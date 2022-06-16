@@ -1,12 +1,9 @@
-
-# infracost.yml
----
 on: [pull_request]
 jobs:
   infracost:
     runs-on: ubuntu-latest
     env:
-      working-directory: .
+      working-directory: terraform
 
     name: Run Infracost
     steps:
@@ -22,7 +19,7 @@ jobs:
 
       - name: Generate Infracost cost estimate baseline
         run: |
-          infracost breakdown --path=. \
+          infracost breakdown --path=terraform \
                               --usage-file infracost-usage.yml \
                               --format=json \
                               --out-file=/tmp/infracost-base.json
@@ -32,7 +29,7 @@ jobs:
 
       - name: Run Infracost
         run: |
-          infracost diff --path=. \
+          infracost diff --path=terraform \
                         --usage-file infracost-usage.yml \
                         --format=json \
                         --compare-to=/tmp/infracost-base.json \
@@ -52,3 +49,4 @@ jobs:
                                    --github-token ${{github.token}} \
                                    --pull-request ${{github.event.pull_request.number}} \
                                    --behavior update
+                                   # --policy-path cost-policy.rego TODO add this back when OPA has fixed https://github.com/open-policy-agent/opa/issues/4610

@@ -9,7 +9,7 @@ jobs:
   infracost:
     runs-on: ubuntu-latest
     env:
-      working-directory: /
+      working-directory: .
 
     name: Run Infracost
     steps:

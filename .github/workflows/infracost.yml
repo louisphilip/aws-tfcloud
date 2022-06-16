@@ -22,7 +22,7 @@ jobs:
 
       - name: Generate Infracost cost estimate baseline
         run: |
-          infracost breakdown --path=terraform \
+          infracost breakdown --path=. \
                               --usage-file infracost-usage.yml \
                               --format=json \
                               --out-file=/tmp/infracost-base.json

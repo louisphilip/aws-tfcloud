@@ -1,15 +1,12 @@
 
 # infracost.yml
 ---
-on:
-  push:
-    branches:
-      - github-actions
+on: [pull_request]
 jobs:
   infracost:
     runs-on: ubuntu-latest
     env:
-      working-directory: .
+      working-directory: terraform
 
     name: Run Infracost
     steps:

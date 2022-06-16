@@ -1,11 +1,11 @@
 provider "aws" {
   # removed profile
-  region  = terraform.workspace == "dev" ? "eu-west-1" : "eu-west-2"
+  region  = "eu-west-1"
   default_tags {
     tags = {
       Environment : terraform.workspace == "dev" ? "Development" : "Production",
       Project : "Serverless-Application",
-      Region : terraform.workspace == "dev" ? "eu-west-1" : "eu-west-2"
+      Region : "eu-west-1"
     }
   }
 }

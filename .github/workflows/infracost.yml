@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      TF_ROOT: .
+      TF_ROOT: ./
       INFRACOST_TERRAFORM_CLOUD_TOKEN: ${{ secrets.TFC_TOKEN }}
       INFRACOST_TERRAFORM_CLOUD_HOST: app.terraform.io 
 

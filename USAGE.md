@@ -31,6 +31,7 @@ No inputs.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_lambda_function"></a> [lambda\_function](#output\_lambda\_function) | n/a |
 | <a name="output_queue_url"></a> [queue\_url](#output\_queue\_url) | This output gives other users information relating to my created resources. |
 
 <!--- END_TF_DOCS --->

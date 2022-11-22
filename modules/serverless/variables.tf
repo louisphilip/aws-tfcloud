@@ -12,3 +12,8 @@ variable "queue_name" {
   type        = string
   description = "The name of your queue"
 }
+
+variable "bucket_name" {
+  type = string
+  description = "(optional) bucket name"
+}

@@ -15,6 +15,7 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_database"></a> [database](#module\_database) | ./modules/database | n/a |
 | <a name="module_serverless"></a> [serverless](#module\_serverless) | ./modules/serverless | n/a |
 
 ## Resources

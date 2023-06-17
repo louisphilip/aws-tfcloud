@@ -31,3 +31,4 @@ override.tf.json
 
 # Infracost
 .infracost*
+credentials.json

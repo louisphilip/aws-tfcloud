@@ -10,8 +10,8 @@ module "serverless" {
 
 }
 
-module "database" {
-  source        = "./modules/database"
-  version       = "1.0"
-  db_identifier = "testing-instance"
-}
+# module "database" {
+#   source        = "./modules/database"
+#   version       = "1.0"
+#   db_identifier = "testing-instance"
+# }

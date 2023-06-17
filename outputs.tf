@@ -4,5 +4,6 @@ output "queue_url" {
 }
 
 output "lambda_function" {
+  description = "This output gives other users information regarding the deployed lambda functions."
   value = module.serverless.lambda_function
 }

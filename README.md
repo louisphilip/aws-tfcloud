@@ -11,7 +11,7 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.2.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -34,6 +34,6 @@ No inputs.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_lambda_function"></a> [lambda\_function](#output\_lambda\_function) | n/a |
+| <a name="output_lambda_function"></a> [lambda\_function](#output\_lambda\_function) | This output gives other users information regarding the deployed lambda functions. |
 | <a name="output_queue_url"></a> [queue\_url](#output\_queue\_url) | This output gives other users information relating to my created resources. |
 <!-- END_TF_DOCS -->

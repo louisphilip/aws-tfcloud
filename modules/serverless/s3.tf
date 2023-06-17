@@ -3,6 +3,14 @@ resource "aws_s3_bucket" "test" {
 }
 
 
+resource "aws_s3_bucket_versioning" "test" {
+  bucket = aws_s3_bucket.test.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
 resource "aws_s3_bucket" "test_log_bucket" {
   bucket = "test-log-bucket"
 }

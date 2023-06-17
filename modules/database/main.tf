@@ -1,14 +1,15 @@
 module "rds" {
   source     = "terraform-aws-modules/rds/aws"
+  version    = "5.9.0"
   identifier = var.db_identifier
   tags = {
     Environment = "dev"
   }
 }
- 
+
 resource "aws_rds_cluster" "name" {
-  
-  
+
+
 }
 
 resource "aws_security_group" "allow_tls" {
@@ -48,5 +49,5 @@ resource "aws_instance" "name" {
 }
 
 resource "aws_ebs_volume" "name" {
-  
+
 }
